@@ -1,0 +1,435 @@
+/* Theme Transition */
+.theme-transition,
+.theme-transition * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* CSS Variables for Light Theme */
+:root,
+[data-theme="light"] {
+  /* Primary Colors */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+
+  /* Secondary Colors */
+  --secondary-50: #faf5ff;
+  --secondary-100: #f3e8ff;
+  --secondary-200: #e9d5ff;
+  --secondary-300: #d8b4fe;
+  --secondary-400: #c084fc;
+  --secondary-500: #a855f7;
+  --secondary-600: #9333ea;
+  --secondary-700: #7c3aed;
+  --secondary-800: #6b21a8;
+  --secondary-900: #581c87;
+
+  /* Accent Colors */
+  --accent-50: #ecfdf5;
+  --accent-100: #d1fae5;
+  --accent-200: #a7f3d0;
+  --accent-300: #6ee7b7;
+  --accent-400: #34d399;
+  --accent-500: #10b981;
+  --accent-600: #059669;
+  --accent-700: #047857;
+  --accent-800: #065f46;
+  --accent-900: #064e3b;
+
+  /* Gray Scale */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --bg-hero: linear-gradient(135deg, #f8fafc 0%, #eff6ff 25%, #faf5ff 50%, #f0f9ff 75%, #f8fafc 100%);
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+
+  /* Border Colors */
+  --border-primary: #e5e7eb;
+  --border-secondary: #d1d5db;
+  --border-focus: #3b82f6;
+
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Theme Toggle */
+  --theme-toggle-bg: linear-gradient(135deg, #fbbf24, #f59e0b);
+  --theme-toggle-border: #f59e0b;
+  --theme-toggle-thumb: #ffffff;
+  --theme-toggle-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --theme-toggle-icon: #f59e0b;
+  --theme-toggle-hover: rgba(59, 130, 246, 0.1);
+  --theme-toggle-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+/* CSS Variables for Dark Theme */
+[data-theme="dark"] {
+  /* Primary Colors - Adjusted for dark mode */
+  --primary-50: #1e3a8a;
+  --primary-100: #1e40af;
+  --primary-200: #1d4ed8;
+  --primary-300: #2563eb;
+  --primary-400: #3b82f6;
+  --primary-500: #60a5fa;
+  --primary-600: #93c5fd;
+  --primary-700: #bfdbfe;
+  --primary-800: #dbeafe;
+  --primary-900: #eff6ff;
+
+  /* Secondary Colors - Adjusted for dark mode */
+  --secondary-50: #581c87;
+  --secondary-100: #6b21a8;
+  --secondary-200: #7c3aed;
+  --secondary-300: #9333ea;
+  --secondary-400: #a855f7;
+  --secondary-500: #c084fc;
+  --secondary-600: #d8b4fe;
+  --secondary-700: #e9d5ff;
+  --secondary-800: #f3e8ff;
+  --secondary-900: #faf5ff;
+
+  /* Accent Colors - Adjusted for dark mode */
+  --accent-50: #064e3b;
+  --accent-100: #065f46;
+  --accent-200: #047857;
+  --accent-300: #059669;
+  --accent-400: #10b981;
+  --accent-500: #34d399;
+  --accent-600: #6ee7b7;
+  --accent-700: #a7f3d0;
+  --accent-800: #d1fae5;
+  --accent-900: #ecfdf5;
+
+  /* Gray Scale - Inverted for dark mode */
+  --gray-50: #111827;
+  --gray-100: #1f2937;
+  --gray-200: #374151;
+  --gray-300: #4b5563;
+  --gray-400: #6b7280;
+  --gray-500: #9ca3af;
+  --gray-600: #d1d5db;
+  --gray-700: #e5e7eb;
+  --gray-800: #f3f4f6;
+  --gray-900: #f9fafb;
+
+  /* Background Colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-hero: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+  --bg-card: rgba(15, 23, 42, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-tertiary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #0f172a;
+
+  /* Border Colors */
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  --border-focus: #60a5fa;
+
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+
+  /* Theme Toggle */
+  --theme-toggle-bg: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --theme-toggle-border: #6366f1;
+  --theme-toggle-thumb: #1e293b;
+  --theme-toggle-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --theme-toggle-icon: #a855f7;
+  --theme-toggle-hover: rgba(139, 92, 246, 0.1);
+  --theme-toggle-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+}
+
+/* Global Theme Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all sections use theme variables */
+section {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+/* White background sections for light theme, dark for dark theme */
+.bg-white {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Update existing components to use theme variables */
+.navbar {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-600);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  color: var(--text-inverse);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--primary-600);
+  border: 2px solid var(--border-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--primary-400);
+}
+
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .mobile-nav-actions {
+    gap: 1rem;
+  }
+}
+
+/* Ensure proper text visibility in all sections */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* Fix any remaining text visibility issues */
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
+/* Ensure images maintain proper visibility */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] img {
+  opacity: 0.95;
+}
+
+/* Fix any gradient text issues */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ensure all cards and containers use theme colors */
+.container,
+.section {
+  background-color: transparent;
+}
+
+/* Fix transformation examples section */
+.transformation-example .example-description h3 {
+  color: var(--text-primary) !important;
+}
+
+.transformation-example .example-description p {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark mode specific modal styles */
+[data-theme="dark"] .modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+}
+
+[data-theme="dark"] .modal-input {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Fix form elements in dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-primary);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Fix form labels in dark mode */
+[data-theme="dark"] label {
+  color: var(--text-secondary);
+}
+
+/* Fix buttons in dark mode */
+[data-theme="dark"] button {
+  color: var(--text-primary);
+}
+
+/* Fix overlays and modals */
+[data-theme="dark"] .overlay,
+[data-theme="dark"] .modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fix image overlays in dark mode */
+[data-theme="dark"] .demo-overlay,
+[data-theme="dark"] .example-overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* Fix card backgrounds in dark mode */
+[data-theme="dark"] .content-card,
+[data-theme="dark"] .tech-feature,
+[data-theme="dark"] .example-container,
+[data-theme="dark"] .member-card,
+[data-theme="dark"] .info-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+}
+
+/* Fix contact page specific elements */
+[data-theme="dark"] .contact-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+}
+
+[data-theme="dark"] .tab-button {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tab-button.active {
+  color: var(--primary-600);
+}
+
+[data-theme="dark"] .tab-button:hover:not(.active) {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Fix FAQ items in dark mode */
+[data-theme="dark"] .faq-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+}
+
+[data-theme="dark"] .faq-question {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .faq-answer {
+  color: var(--text-secondary);
+}
+
+/* Fix mobile menu in dark mode */
+[data-theme="dark"] .mobile-menu-overlay {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .mobile-nav-link {
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+[data-theme="dark"] .hamburger-line {
+  background: var(--text-secondary);
+}
+
+/* Fix image visibility in dark mode */
+[data-theme="dark"] .tech-demo-image,
+[data-theme="dark"] .example-image {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Fix floating elements in dark mode */
+[data-theme="dark"] .floating-element {
+  opacity: 0.05;
+}
